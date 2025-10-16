@@ -83,6 +83,66 @@ Svaki vozač može prijaviti problem sa aplikacijom ili poslom, a zadatak dispe�
 
 ## Upravljanje prikolicama
 
+Dispečer ima, kao i za kamione, pravo da vidi listu svih prikolica u firmi, kao i da mijenja njihove podatke, ali i obriše one koje nisu dodijeljene. Uz to ima i mogućnost dodavanja novih prikolica u sistem.
+
+<img width="1261" height="948" alt="Image" src="https://github.com/user-attachments/assets/ba9e5dc3-eb2d-42c3-977a-d45592cf3155" />
+
+
+<img width="1254" height="948" alt="Image" src="https://github.com/user-attachments/assets/deafe742-b57e-45c6-969e-36ddfb1af0eb" />
+
+
+
+
+## Funkcionalnosti vozača
+
+U nastavku se nalaze sve mogućnosti koje vozači imaju u sistemu.
+
+## Početna strana vozača
+
+Nakon uspješne prijave, vozačima se otvara početna strana vozača na kojoj mogu otvarati svoje funkcionalnosti, kao i mijenjati temu, jeziki ili odjaviti se sa sistema.
+
+<img width="1253" height="940" alt="Image" src="https://github.com/user-attachments/assets/561e015e-458f-4fe3-82c0-c2fe13fbb2ae" />
+
+
+## Lista tura vozača
+
+Na listi tura, vozač može vidjeti sve predstojeće ture koje su za njega planirane, kao i prethodne, koje su već završene.
+Takođe, vozač može ući i na detalje neke ture, i tu će mu biti prikazani svi detalji o toj turi, kao npr firma izvorišta i firma odredišta koju mora u određeno vrijeme posjetiti.
+
+<img width="976" height="607" alt="Image" src="https://github.com/user-attachments/assets/d9b8e1f6-1571-4c3e-95ef-b57058b2ef20" />
+
+
+
+<img width="852" height="609" alt="Image" src="https://github.com/user-attachments/assets/f960576b-ce8f-45a1-8631-a4df8f70abdb" />
+
+
+
+## Podaci o sopstvenom kamionu i prikolici
+
+U odvojenim sekcijama, vozač može vidjeti sve podatke o njegovom kamionu ili prikolici, što je često korisno u slučaju da mu je tek dodijeljeno jedno od navedenog.
+
+<img width="852" height="544" alt="Image" src="https://github.com/user-attachments/assets/d26872cf-8f93-4070-aa69-248c5262b212" />
+
+
+
+<img width="598" height="362" alt="Image" src="https://github.com/user-attachments/assets/e9c3b63b-c67b-492a-8fac-cf8b584117fb" />
+
+
+## Prijava problema
+
+Svaki vozač ima pravo da iz aplikacije prijavi problem, bilo da se radi o funkcionisanju samog sistema, ili da prijavi problem vezano za turu, kamion ili bilo šta u vezi njegovog zaduženja.
+
+<img width="729" height="490" alt="Image" src="https://github.com/user-attachments/assets/97c95e3d-dc9b-4a92-9fcb-ed3aba986478" />
+
+
+
+## Servisi i održavanje
+
+Vozač ima mogućnost da vidi podatke o održavanju i servisima njegovog kamiona ili prikolice, kao i da vidi potencijalno zakazane termine na koje mora otići.
+
+<img width="1107" height="739" alt="Image" src="https://github.com/user-attachments/assets/8cd198c1-0fe5-4b0e-aff6-66a9863262f6" />
+
+
 
 
 
