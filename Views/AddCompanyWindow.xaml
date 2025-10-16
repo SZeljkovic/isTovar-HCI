@@ -1,0 +1,88 @@
+﻿<Window x:Class="Projekat_B_isTovar.Views.AddCompanyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Projekat_B_isTovar.Resources"
+        xmlns:MaterialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="{Binding Title}" Height="650" Width="500"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource BackgroundColor}">
+
+    <Window.Resources>
+        <local:AddCompanyStrings x:Key="Strings"/>
+        <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter Property="MaterialDesign:HintAssist.Foreground" Value="{DynamicResource PrimaryColor}"/>
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <StackPanel>
+            <!-- Naslov -->
+            <TextBlock Text="{Binding Source={StaticResource Strings}, Path=Title}"
+                       FontSize="22" FontWeight="Bold"
+                       Margin="0,0,0,20"
+                       HorizontalAlignment="Center"
+                       Foreground="{DynamicResource PrimaryColor}"/>
+
+            <!-- Firma -->
+            <TextBox x:Name="txtNaziv" 
+                     MaterialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=Name}" 
+                     Margin="0,0,0,10"/>
+            <TextBox x:Name="txtEmail" 
+                     MaterialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=Email}" 
+                     Margin="0,0,0,10"/>
+            <TextBox x:Name="txtZiroRacun" 
+                     MaterialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=Account}" 
+                     Margin="0,0,0,10"/>
+
+            <!-- Adresa -->
+            <TextBox x:Name="txtUlica" 
+                     MaterialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=Street}" 
+                     Margin="0,0,0,10"/>
+            <TextBox x:Name="txtBroj" 
+                     MaterialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=Number}" 
+                     Margin="0,0,0,10"/>
+            <TextBox x:Name="txtGrad" 
+                     MaterialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=City}" 
+                     Margin="0,0,0,10"/>
+            <TextBox x:Name="txtPostanskiBroj" 
+                     MaterialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=PostalCode}" 
+                     Margin="0,0,0,10"/>
+            <TextBox x:Name="txtDrzava" 
+                     MaterialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=Country}" 
+                     Margin="0,0,0,10"/>
+
+            <!-- Telefon -->
+            <TextBox x:Name="txtTelefon" 
+                     MaterialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=Phone}" 
+                     Margin="0,0,0,10"/>
+            <CheckBox x:Name="chkFax"
+                      Content="{Binding Source={StaticResource Strings}, Path=Fax}" 
+                      Margin="0,0,0,20"
+                      Foreground="{DynamicResource TextColor}"/>
+
+            <!-- Dugmad -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="{Binding Source={StaticResource Strings}, Path=AddButton}" 
+                        Width="100" Height="35" 
+                        Background="Green" 
+                        Foreground="White"
+                        Click="AddButton_Click"/>
+                <Button Content="{Binding Source={StaticResource Strings}, Path=ClearButton}" 
+                        Width="100" Height="35" 
+                        Click="ClearButton_Click"/>
+                <Button Content="{Binding Source={StaticResource Strings}, Path=CloseButton}"
+                        Background="Red"
+                        Width="100" Height="35" 
+                        Click="CloseButton_Click"/>
+            </StackPanel>
+
+            <!-- Feedback -->
+            <TextBlock x:Name="lblMessage"
+                       Foreground="Tomato"
+                       FontSize="14"
+                       HorizontalAlignment="Center"
+                       Margin="0,15,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

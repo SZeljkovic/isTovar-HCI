@@ -1,0 +1,735 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WelcomeDriver" xml:space="preserve">
+    <value>Dobrodošli, Vozač!</value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>Raspored tura</value>
+  </data>
+  <data name="MyTruck" xml:space="preserve">
+    <value>Moj kamion</value>
+  </data>
+  <data name="MyTrailer" xml:space="preserve">
+    <value>Moja prikolica</value>
+  </data>
+  <data name="ReportIssue" xml:space="preserve">
+    <value>Prijavi problem</value>
+  </data>
+  <data name="WelcomeDispatcher" xml:space="preserve">
+    <value>Dobrodošli, Dispečer!</value>
+  </data>
+  <data name="Drivers" xml:space="preserve">
+    <value>Vozači</value>
+  </data>
+  <data name="Trucks" xml:space="preserve">
+    <value>Kamioni</value>
+  </data>
+  <data name="Trailers" xml:space="preserve">
+    <value>Prikolice</value>
+  </data>
+  <data name="Issues" xml:space="preserve">
+    <value>Problemi</value>
+  </data>
+  <data name="Tours" xml:space="preserve">
+    <value>Ture</value>
+  </data>
+  <data name="AddTour" xml:space="preserve">
+    <value>Dodaj turu</value>
+  </data>
+  <data name="DriversList" xml:space="preserve">
+    <value>Lista vozača</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Korisničko ime</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Ime</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Prezime</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="LicenseNumber" xml:space="preserve">
+    <value>Broj dozvole</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>Licenca</value>
+  </data>
+  <data name="TruckId" xml:space="preserve">
+    <value>ID kamiona</value>
+  </data>
+  <data name="Availability" xml:space="preserve">
+    <value>Dostupnost</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Zatvori</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>Dostupan</value>
+  </data>
+  <data name="Unavailable" xml:space="preserve">
+    <value>Nedostupan</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Nepoznat</value>
+  </data>
+  <data name="TrucksList" xml:space="preserve">
+    <value>Kamioni</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tip</value>
+  </data>
+  <data name="Brand" xml:space="preserve">
+    <value>Brend</value>
+  </data>
+  <data name="HorsePower" xml:space="preserve">
+    <value>Konjske snage</value>
+  </data>
+  <data name="IdTrailer" xml:space="preserve">
+    <value>ID Prikolice</value>
+  </data>
+  <data name="Fuel" xml:space="preserve">
+    <value>Gorivo</value>
+  </data>
+  <data name="ProductionYear" xml:space="preserve">
+    <value>Godina proizvodnje</value>
+  </data>
+  <data name="Mileage" xml:space="preserve">
+    <value>Kilometraža</value>
+  </data>
+  <data name="TrailersList" xml:space="preserve">
+    <value>Prikolice</value>
+  </data>
+  <data name="Kind" xml:space="preserve">
+    <value>Vrsta</value>
+  </data>
+  <data name="Capacity" xml:space="preserve">
+    <value>Nosivost</value>
+  </data>
+  <data name="IssuesTitle" xml:space="preserve">
+    <value>Problemi</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Sadržaj</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="UserID" xml:space="preserve">
+    <value>ID Korisnika</value>
+  </data>
+  <data name="LicensePlate" xml:space="preserve">
+    <value>Registarska oznaka</value>
+  </data>
+  <data name="DriverID" xml:space="preserve">
+    <value>ID Vozača</value>
+  </data>
+  <data name="DispatcherId" xml:space="preserve">
+    <value>ID Dispečera</value>
+  </data>
+  <data name="FinalPrice" xml:space="preserve">
+    <value>Ukupna cijena</value>
+  </data>
+  <data name="DepartureDate" xml:space="preserve">
+    <value>Datum polaska</value>
+  </data>
+  <data name="DepartureTime" xml:space="preserve">
+    <value>Vrijeme polaska</value>
+  </data>
+  <data name="ArrivalDate" xml:space="preserve">
+    <value>Datum dolaska</value>
+  </data>
+  <data name="ArrivalTime" xml:space="preserve">
+    <value>Vrijeme dolaska</value>
+  </data>
+  <data name="SelectDriver" xml:space="preserve">
+    <value>Odaberi vozača</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Potvrdi</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Otkaži</value>
+  </data>
+  <data name="SelectButton" xml:space="preserve">
+    <value>Odaberi</value>
+  </data>
+  <data name="IssueDescription" xml:space="preserve">
+    <value>Opis problema</value>
+  </data>
+  <data name="EmptyErrorMessage" xml:space="preserve">
+    <value>Ne možete ostaviti prazno</value>
+  </data>
+  <data name="SuccessMessage" xml:space="preserve">
+    <value>Uspješno obavljeno</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Jezik</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Plava</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Tamna</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Svijetla</value>
+  </data>
+  <data name="MyTours" xml:space="preserve">
+    <value>Moje ture</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Cijena</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detalji</value>
+  </data>
+  <data name="NoTours" xml:space="preserve">
+    <value>Nema tura</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Završeno</value>
+  </data>
+  <data name="InProgress" xml:space="preserve">
+    <value>U toku</value>
+  </data>
+  <data name="Tour" xml:space="preserve">
+    <value>Tura</value>
+  </data>
+  <data name="TourDetails" xml:space="preserve">
+    <value>Detalji ture</value>
+  </data>
+  <data name="SourceCompanies" xml:space="preserve">
+    <value>Firme izvorišta</value>
+  </data>
+  <data name="DestinationCompanies" xml:space="preserve">
+    <value>Firme odredišta</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Nazad</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Firma</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Vrijeme</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Adresa</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Lozinka</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Prijava</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registracija</value>
+  </data>
+  <data name="NoAccount" xml:space="preserve">
+    <value>Nemaš nalog?</value>
+  </data>
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Neispravno korisničko ime ili lozinka!</value>
+  </data>
+  <data name="DbError" xml:space="preserve">
+    <value>Greška pri konekciji</value>
+  </data>
+  <data name="EmptyLoginFields" xml:space="preserve">
+    <value>Unesite korisničko ime i lozinku</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Uloga</value>
+  </data>
+  <data name="Dispatcher" xml:space="preserve">
+    <value>Dispečer</value>
+  </data>
+  <data name="Driver" xml:space="preserve">
+    <value>Vozač</value>
+  </data>
+  <data name="RegisterButton" xml:space="preserve">
+    <value>Registruj se</value>
+  </data>
+  <data name="EmptyRegisterFields" xml:space="preserve">
+    <value>Popunite sva obavezna polja!</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>Moj profil</value>
+  </data>
+  <data name="SaveButton" xml:space="preserve">
+    <value>Sačuvaj</value>
+  </data>
+  <data name="AddCompanyTitle" xml:space="preserve">
+    <value>Dodaj firmu</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Naziv firme</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>Ziro racun</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Ulica</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Broj</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Grad</value>
+  </data>
+  <data name="PostalCode" xml:space="preserve">
+    <value>Poštanski broj</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Država</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>Faks</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Očisti</value>
+  </data>
+  <data name="EmptyCompanyFields" xml:space="preserve">
+    <value>Unesite sva obavezna polja!</value>
+  </data>
+  <data name="CompanyAdded" xml:space="preserve">
+    <value>Firma dodana</value>
+  </data>
+  <data name="EditRoute" xml:space="preserve">
+    <value>Uredi rutu</value>
+  </data>
+  <data name="SelectTour" xml:space="preserve">
+    <value>Odaberi turu</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Firma izvorišta</value>
+  </data>
+  <data name="Destination" xml:space="preserve">
+    <value>Firma odredišta</value>
+  </data>
+  <data name="SelectCompany" xml:space="preserve">
+    <value>Odaberi firmu</value>
+  </data>
+  <data name="AddSource" xml:space="preserve">
+    <value>Dodaj izvorište</value>
+  </data>
+  <data name="AddDestination" xml:space="preserve">
+    <value>Dodaj odredište</value>
+  </data>
+  <data name="EditTour" xml:space="preserve">
+    <value>Uredi turu</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Servisi i održavanje</value>
+  </data>
+  <data name="MaintenanceTitle" xml:space="preserve">
+    <value>Servisi i održavanje</value>
+  </data>
+  <data name="Truck" xml:space="preserve">
+    <value>Kamion</value>
+  </data>
+  <data name="Trailer" xml:space="preserve">
+    <value>Prikolica</value>
+  </data>
+  <data name="TruckInfo" xml:space="preserve">
+    <value>Podaci o kamionu</value>
+  </data>
+  <data name="TrailerInfo" xml:space="preserve">
+    <value>Podaci o prikolici</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="AddTruck" xml:space="preserve">
+    <value>Dodaj kamion</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Sačuvaj</value>
+  </data>
+  <data name="TabAddTrailer" xml:space="preserve">
+    <value>Dodaj prikolicu</value>
+  </data>
+  <data name="AssignButton" xml:space="preserve">
+    <value>Dodijeli</value>
+  </data>
+  <data name="AssignTrailer" xml:space="preserve">
+    <value>Dodijeli prikolicu</value>
+  </data>
+  <data name="EnterStatus" xml:space="preserve">
+    <value>Unesite status</value>
+  </data>
+  <data name="EnterFinalPrice" xml:space="preserve">
+    <value>Unesite ukupnu cijenu</value>
+  </data>
+  <data name="SelectDate" xml:space="preserve">
+    <value>Odaberite datum</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Sati</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Minute</value>
+  </data>
+  <data name="ChoosenDriver" xml:space="preserve">
+    <value>Izabrani vozač:</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Izmijeni</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Obriši</value>
+  </data>
+  <data name="EditTrailer" xml:space="preserve">
+    <value>Izmijeni prikolicu</value>
+  </data>
+  <data name="TruckLoadError" xml:space="preserve">
+    <value>Greška pri učitavanju kamiona</value>
+  </data>
+  <data name="TruckDeleted" xml:space="preserve">
+    <value>Kamion obrisan</value>
+  </data>
+  <data name="TruckAdded" xml:space="preserve">
+    <value>Kamion uspješno dodan.</value>
+  </data>
+  <data name="EditChooseTruck" xml:space="preserve">
+    <value>Molimo odaberite kamion za izmjenu.</value>
+  </data>
+  <data name="TruckEdited" xml:space="preserve">
+    <value>Kamion uspješno izmijenjen.</value>
+  </data>
+  <data name="TruckEditError" xml:space="preserve">
+    <value>Greška pri izmjeni kamiona.</value>
+  </data>
+  <data name="EnterAllFields" xml:space="preserve">
+    <value>Molimo popunite sva polja.</value>
+  </data>
+  <data name="HpError" xml:space="preserve">
+    <value>Konjske snage moraju biti broj.</value>
+  </data>
+  <data name="YpError" xml:space="preserve">
+    <value>Godina proizvodnje mora biti broj.</value>
+  </data>
+  <data name="MileageError" xml:space="preserve">
+    <value>Kilometraža mora biti broj.</value>
+  </data>
+  <data name="TrailerLoadError" xml:space="preserve">
+    <value>Greška pri učitavanju prikolica.</value>
+  </data>
+  <data name="ChooseTruckTrailer" xml:space="preserve">
+    <value>Odaberi i kamion i prikolicu.</value>
+  </data>
+  <data name="TrailerAssigned" xml:space="preserve">
+    <value>Prikolica uspješno dodijeljena.</value>
+  </data>
+  <data name="AssignTrailerError" xml:space="preserve">
+    <value>Greška pri dodjeli prikolice.</value>
+  </data>
+  <data name="TruckConfirmDelete" xml:space="preserve">
+    <value>Da li ste sigurni da želite obrisati kamion?</value>
+  </data>
+  <data name="DeleteConfirmation" xml:space="preserve">
+    <value>Potvrda brisanja</value>
+  </data>
+  <data name="TruckDeleteError" xml:space="preserve">
+    <value>Greška pri brisanju kamiona.</value>
+  </data>
+  <data name="ChooseTruckDelete" xml:space="preserve">
+    <value>Odaberite kamion za brisanje!</value>
+  </data>
+  <data name="TrailerAdded" xml:space="preserve">
+    <value>Prikolica uspješno dodana.</value>
+  </data>
+  <data name="TrailerAddError" xml:space="preserve">
+    <value>Greška pri dodavanju prikolice.</value>
+  </data>
+  <data name="PlsChooseTrailer" xml:space="preserve">
+    <value>Molimo vas odaberite prikolicu za izmjenu.</value>
+  </data>
+  <data name="TrailerEdited" xml:space="preserve">
+    <value>Prikolica uspješno izmijenjena.</value>
+  </data>
+  <data name="TrailerEditError" xml:space="preserve">
+    <value>Greška pri izmjeni prikolice.</value>
+  </data>
+  <data name="ChooseDeleteTrailer" xml:space="preserve">
+    <value>Molimo odaberite prikolicu za brisanje.</value>
+  </data>
+  <data name="TrailerDeleteSure" xml:space="preserve">
+    <value>Da li ste sigurni da želite obrisati odabranu prikolicu?</value>
+  </data>
+  <data name="TrailerDeleted" xml:space="preserve">
+    <value>Prikolica obrisana!</value>
+  </data>
+  <data name="CantDeleteTrailer" xml:space="preserve">
+    <value>Ne možete obrisati ovu prikolicu jer je već zadužena. Oslobodite ju prije brisanja!</value>
+  </data>
+  <data name="TrailerDeleteError" xml:space="preserve">
+    <value>Greška pri brisanju prikolice.</value>
+  </data>
+  <data name="CapacityError" xml:space="preserve">
+    <value>Nosivost mora biti broj!</value>
+  </data>
+  <data name="DriverDeleteError" xml:space="preserve">
+    <value>Greška pri brisanju vozača.</value>
+  </data>
+  <data name="CantDeleteDriver" xml:space="preserve">
+    <value>Nije moguće obrisati vozača zbog njegovih dodjela. Molimo riješite to prvo.</value>
+  </data>
+  <data name="DriverDeleted" xml:space="preserve">
+    <value>Vozač obrisan.</value>
+  </data>
+  <data name="DriverDeleteSure" xml:space="preserve">
+    <value>Da li ste sigurni da želite obrisati odabranog vozača?</value>
+  </data>
+  <data name="ChooseDeleteDriver" xml:space="preserve">
+    <value>Molimo vas odaberite vozača za brisanje.</value>
+  </data>
+  <data name="DriverEditError" xml:space="preserve">
+    <value>Greška pri izmjeni podataka vozača.</value>
+  </data>
+  <data name="DriverEdited" xml:space="preserve">
+    <value>Podaci o vozaču uspješno promijenjeni.</value>
+  </data>
+  <data name="PlsChooseDriver" xml:space="preserve">
+    <value>Molimo vas odaberite vozača.</value>
+  </data>
+  <data name="DriverLoadError" xml:space="preserve">
+    <value>Greška pri učitavanju vozača.</value>
+  </data>
+  <data name="EditIssue" xml:space="preserve">
+    <value>Izmjena problema</value>
+  </data>
+  <data name="ChooseIssueEdit" xml:space="preserve">
+    <value>Molimo odaberite problem za izmjenu.</value>
+  </data>
+  <data name="ProblemText" xml:space="preserve">
+    <value>Tekst problema ne može biti prazan.</value>
+  </data>
+  <data name="EditUserId" xml:space="preserve">
+    <value>ID korisnika mora biti validan pozitivan broj.</value>
+  </data>
+  <data name="ProblemEdited" xml:space="preserve">
+    <value>Problem uspješno izmijenjen.</value>
+  </data>
+  <data name="ErrorEditProblem" xml:space="preserve">
+    <value>Greška pri izmjeni problema.</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Greška</value>
+  </data>
+  <data name="DriverAvailabilityError" xml:space="preserve">
+    <value>Greška provjere dostupnosti vozača</value>
+  </data>
+  <data name="TourGetError" xml:space="preserve">
+    <value>Greška pri dohvatanju ture.</value>
+  </data>
+  <data name="TourAdded" xml:space="preserve">
+    <value>Tura je uspješno dodana.</value>
+  </data>
+  <data name="IsBusy" xml:space="preserve">
+    <value>je zauzet u tom vremenskom periodu.</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Upozorenje</value>
+  </data>
+  <data name="DepartureArrivalWarning" xml:space="preserve">
+    <value>Vrijeme polaska mora biti prije vremena dolaska.</value>
+  </data>
+  <data name="PleaseValidPrice" xml:space="preserve">
+    <value>Molimo vas unesite validnu cijenu.</value>
+  </data>
+  <data name="PleaseValidDriver" xml:space="preserve">
+    <value>Molimo vas unesite validnog vozača.</value>
+  </data>
+  <data name="PleaseValidTime" xml:space="preserve">
+    <value>Molimo vas unesite sve validne vrijednosti za vremena.</value>
+  </data>
+  <data name="TourLoadError" xml:space="preserve">
+    <value>Greška pri učitavanju ture.</value>
+  </data>
+  <data name="CompanyLoadError" xml:space="preserve">
+    <value>Greška pri učitavanju firmi.</value>
+  </data>
+  <data name="SourceFields" xml:space="preserve">
+    <value>Unesite sva polja za firmu izvorišta.</value>
+  </data>
+  <data name="SourceAdded" xml:space="preserve">
+    <value>Izvorište uspješno dodano.</value>
+  </data>
+  <data name="DestinationFields" xml:space="preserve">
+    <value>Popunite sva polja za odredište.</value>
+  </data>
+  <data name="DestinationAdded" xml:space="preserve">
+    <value>Odredište uspješno dodano.</value>
+  </data>
+  <data name="DataChanged" xml:space="preserve">
+    <value>Podaci uspješno ažurirani.</value>
+  </data>
+  <data name="NoTrailerData" xml:space="preserve">
+    <value>Nema podataka o prikolici.</value>
+  </data>
+  <data name="NoTruckData" xml:space="preserve">
+    <value>Nema podataka o kamionu.</value>
+  </data>
+  <data name="RegistrationSuccessful" xml:space="preserve">
+    <value>Registracija uspješna!</value>
+  </data>
+  <data name="ConnectionError" xml:space="preserve">
+    <value>Greška pri konekciji.</value>
+  </data>
+  <data name="ChooseSelectDriver" xml:space="preserve">
+    <value>Molimo vas odaberite vozača iz tabele.</value>
+  </data>
+  <data name="DriverSelectionError" xml:space="preserve">
+    <value>Greška pri odabiru vozača.</value>
+  </data>
+  <data name="DriverName" xml:space="preserve">
+    <value>Ime vozača</value>
+  </data>
+  <data name="DispatcherName" xml:space="preserve">
+    <value>Ime dispečera</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Pretraži</value>
+  </data>
+  <data name="UpcomingTours" xml:space="preserve">
+    <value>Predstojeće ture</value>
+  </data>
+  <data name="PastTours" xml:space="preserve">
+    <value>Prethodne ture</value>
+  </data>
+</root>

@@ -1,0 +1,159 @@
+﻿<Window x:Class="Projekat_B_isTovar.Views.DispatcherHome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="{Binding WelcomeDispatcher}"
+        Height="768" Width="1024"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="{DynamicResource BackgroundColor}">
+
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Naslov i Logout ikonica -->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0"
+               Text="{Binding WelcomeDispatcher}"
+               FontSize="28"
+               FontWeight="Bold"
+               Margin="0 0 0 30"
+               Foreground="{DynamicResource PrimaryColor}" 
+               HorizontalAlignment="Center"/>
+
+            <Button Grid.Column="1" 
+            Style="{StaticResource MaterialDesignIconButton}"
+            ToolTip="Logout"
+            Click="BtnLogout_Click"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            Margin="0 0 10 30">
+                <materialDesign:PackIcon Kind="Logout" 
+                                Width="30" 
+                                Height="30"
+                                Foreground="{DynamicResource PrimaryColor}"/>
+            </Button>
+        </Grid>
+
+        <!-- Kartice -->
+        <UniformGrid Grid.Row="1" Columns="3" Rows="2" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Top">
+
+            <materialDesign:Card Padding="20" Margin="15" Cursor="Hand" MouseDown="CardDrivers_Click"
+                                 Background="{DynamicResource BackgroundColor}">
+                <StackPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="AccountGroup" Width="50" Height="50"
+                                             Foreground="{DynamicResource PrimaryColor}" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{Binding Drivers}" FontSize="18" FontWeight="SemiBold"
+                               Foreground="{DynamicResource PrimaryColor}" Margin="10 5 0 0" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card Padding="20" Margin="15" Cursor="Hand" MouseDown="CardTrucks_Click"
+                                 Background="{DynamicResource BackgroundColor}">
+                <StackPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="Truck" Width="50" Height="50"
+                                             Foreground="{DynamicResource PrimaryColor}" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{Binding Trucks}" FontSize="18" FontWeight="SemiBold"
+                               Foreground="{DynamicResource PrimaryColor}" Margin="10 5 0 0" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card Padding="20" Margin="15" Cursor="Hand" MouseDown="CardTrailers_Click"
+                                 Background="{DynamicResource BackgroundColor}">
+                <StackPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="TruckTrailer" Width="50" Height="50"
+                                             Foreground="{DynamicResource PrimaryColor}" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{Binding Trailers}" FontSize="18" FontWeight="SemiBold"
+                               Foreground="{DynamicResource PrimaryColor}" Margin="10 5 0 0" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card Padding="20" Margin="15" Cursor="Hand" MouseDown="CardIssues_Click"
+                                 Background="{DynamicResource BackgroundColor}">
+                <StackPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="AlertCircle" Width="50" Height="50"
+                                             Foreground="{DynamicResource PrimaryColor}" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{Binding Issues}" FontSize="18" FontWeight="SemiBold"
+                               Foreground="{DynamicResource PrimaryColor}" Margin="10 5 0 0" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card Padding="20" Margin="15" Cursor="Hand" MouseDown="CardTours_Click"
+                                 Background="{DynamicResource BackgroundColor}">
+                <StackPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="MapMarker" Width="50" Height="50"
+                                             Foreground="{DynamicResource PrimaryColor}" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{Binding Tours}" FontSize="18" FontWeight="SemiBold"
+                               Foreground="{DynamicResource PrimaryColor}" Margin="10 5 0 0" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card Padding="20" Margin="15" Cursor="Hand" MouseDown="CardAddTour_Click"
+                                 Background="{DynamicResource BackgroundColor}">
+                <StackPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="PlusCircle" Width="50" Height="50"
+                                             Foreground="{DynamicResource PrimaryColor}" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{Binding AddTour}" FontSize="18" FontWeight="SemiBold"
+                               Foreground="{DynamicResource PrimaryColor}" Margin="10 5 0 0" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card Padding="20" Margin="15" Cursor="Hand" MouseDown="CardMyProfile_Click"
+                     Background="{DynamicResource BackgroundColor}">
+                <StackPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="AccountCircle" Width="50" Height="50"
+                                 Foreground="{DynamicResource PrimaryColor}" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{Binding MyProfile}" FontSize="18" FontWeight="SemiBold"
+                   Foreground="{DynamicResource PrimaryColor}" Margin="10 5 0 0" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card Padding="20" Margin="15" Cursor="Hand" MouseDown="CardAddCompany_Click"
+         Background="{DynamicResource BackgroundColor}">
+                <StackPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="AddNetwork" Width="50" Height="50"
+                     Foreground="{DynamicResource PrimaryColor}" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{Binding AddCompany}" FontSize="18" FontWeight="SemiBold"
+                     Foreground="{DynamicResource PrimaryColor}" Margin="10 5 0 0" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </materialDesign:Card>
+
+            <materialDesign:Card Padding="20" Margin="15" Cursor="Hand" MouseDown="CardEditTour_Click"
+                Background="{DynamicResource BackgroundColor}">
+                <StackPanel HorizontalAlignment="Center">
+                    <materialDesign:PackIcon Kind="EventEdit" Width="50" Height="50"
+                     Foreground="{DynamicResource PrimaryColor}" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{Binding EditTour}" FontSize="18" FontWeight="SemiBold"
+                     Foreground="{DynamicResource PrimaryColor}" Margin="10 5 0 0" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </materialDesign:Card>
+
+
+        </UniformGrid>
+
+        <!-- Postavke korisnika: Tema i Jezik -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,20">
+            <TextBlock Text="{Binding Theme}" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryColor}" FontWeight="Bold" Margin="0,0,5,0"/>
+            <ComboBox x:Name="cbTheme" Width="120" SelectionChanged="CbTheme_SelectionChanged" Margin="0,0,15,0">
+                <ComboBoxItem Content="{Binding Light}" Tag="LightTheme.xaml"/>
+                <ComboBoxItem Content="{Binding Dark}" Tag="DarkTheme.xaml"/>
+                <ComboBoxItem Content="{Binding Blue}" Tag="BlueTheme.xaml"/>
+            </ComboBox>
+
+            <TextBlock Text="{Binding Language}" VerticalAlignment="Center" Foreground="{DynamicResource PrimaryColor}" FontWeight="Bold" Margin="0,0,5,0"/>
+            <ComboBox x:Name="cbLanguage" Width="120" SelectionChanged="CbLanguage_SelectionChanged">
+                <ComboBoxItem Content="Srpski" Tag="sr"/>
+                <ComboBoxItem Content="English" Tag="en"/>
+            </ComboBox>
+        </StackPanel>
+    </Grid>
+</Window>

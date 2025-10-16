@@ -1,0 +1,192 @@
+﻿<Window x:Class="Projekat_B_isTovar.Views.TrucksWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Projekat_B_isTovar.Resources"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="{Binding TrucksTitle}" 
+        Height="768" Width="1024"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource BackgroundColor}">
+
+    <Window.Resources>
+        <local:TrucksStrings x:Key="Strings"/>
+    </Window.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Naslov -->
+            <TextBlock Text="{Binding TrucksTitle}" 
+                       FontSize="26" 
+                       FontWeight="Bold" 
+                       HorizontalAlignment="Center"
+                       Foreground="{DynamicResource PrimaryColor}" 
+                       Margin="0,0,0,20"/>
+
+            <!-- TabControl -->
+            <TabControl Grid.Row="1" Background="{DynamicResource BackgroundColor}">
+
+                <!-- Lista kamiona -->
+                <TabItem Header="{Binding Source={StaticResource Strings}, Path=TabList}">
+                    <StackPanel Margin="10">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <DataGrid x:Name="TrucksDataGrid" 
+                                      Margin="0,0,0,10"
+                                      AutoGenerateColumns="False"
+                                      IsReadOnly="True"
+                                      AlternatingRowBackground="{DynamicResource AlternatingRowBackgroundBrush}"
+                                      RowBackground="{DynamicResource RowBackgroundBrush}"
+                                      Foreground="{DynamicResource PrimaryColor}"
+                                      GridLinesVisibility="All"
+                                      SelectionMode="Single"
+                                      SelectionUnit="FullRow">
+
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="{Binding Source={StaticResource Strings}, Path=Id}" Binding="{Binding IdKamiona}" Width="60"/>
+                                    <DataGridTextColumn Header="{Binding Source={StaticResource Strings}, Path=ColumnType}" Binding="{Binding Tip}" Width="120"/>
+                                    <DataGridTextColumn Header="{Binding Source={StaticResource Strings}, Path=ColumnBrand}" Binding="{Binding Brend}" Width="120"/>
+                                    <DataGridTextColumn Header="{Binding Source={StaticResource Strings}, Path=ColumnHP}" Binding="{Binding KonjskeSnage}" Width="100"/>
+                                    <DataGridTextColumn Header="{Binding Source={StaticResource Strings}, Path=IdTrailer}" Binding="{Binding IdPrikolice}" Width="100"/>
+                                    <DataGridTextColumn Header="{Binding Source={StaticResource Strings}, Path=ColumnFuel}" Binding="{Binding Gorivo}" Width="100"/>
+                                    <DataGridTextColumn Header="{Binding Source={StaticResource Strings}, Path=ColumnProductionYear}" Binding="{Binding GodinaProizvodnje}" Width="120"/>
+                                    <DataGridTextColumn Header="{Binding Source={StaticResource Strings}, Path=ColumnLicensePlate}" Binding="{Binding RegistarskaOznaka}" Width="120"/>
+                                    <DataGridTextColumn Header="{Binding Source={StaticResource Strings}, Path=ColumnMileage}" Binding="{Binding Kilometraza}" Width="120"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Button Content="{Binding Source={StaticResource Strings}, Path=EditButton}" 
+                                        Width="100" Margin="5" Background="{DynamicResource PrimaryColor}" Click="EditTruck_Click"/>
+                                <Button Content="{Binding Source={StaticResource Strings}, Path=DeleteButton}" 
+                                        Width="100" Margin="5" Background="{DynamicResource PrimaryColor}" Click="DeleteTruck_Click"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <!-- Panel za izmjenu -->
+                        <GroupBox Header="{Binding Source={StaticResource Strings}, Path=EditButton}" Margin="10" x:Name="EditPanel" Visibility="Collapsed">
+                            <StackPanel Margin="10" Width="400">
+                                <TextBox x:Name="editType"
+                                         materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=ColumnType}"
+                                         Foreground="{DynamicResource PrimaryColor}" Margin="0,5"/>
+                                <TextBox x:Name="editBrand"
+                                         materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=ColumnBrand}"
+                                         Foreground="{DynamicResource PrimaryColor}" Margin="0,5"/>
+                                <TextBox x:Name="editHP"
+                                         materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=ColumnHP}"
+                                         Foreground="{DynamicResource PrimaryColor}" Margin="0,5"/>
+                                <TextBox x:Name="editFuel"
+                                         materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=ColumnFuel}"
+                                         Foreground="{DynamicResource PrimaryColor}" Margin="0,5"/>
+                                <TextBox x:Name="editYear"
+                                         materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=ColumnProductionYear}"
+                                         Foreground="{DynamicResource PrimaryColor}" Margin="0,5"/>
+                                <TextBox x:Name="editPlate"
+                                         materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=ColumnLicensePlate}"
+                                         Foreground="{DynamicResource PrimaryColor}" Margin="0,5"/>
+                                <TextBox x:Name="editMileage"
+                                         materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=ColumnMileage}"
+                                         Foreground="{DynamicResource PrimaryColor}" Margin="0,5"/>
+                                <Button Content="{Binding Source={StaticResource Strings}, Path=SaveButton}"
+                                        Width="120" Height="30"
+                                        Margin="0,15,0,0"
+                                        HorizontalAlignment="Left"
+                                        Click="UpdateTruck_Click"/>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </TabItem>
+
+                <!-- Dodavanje kamiona -->
+                <TabItem Header="{Binding Source={StaticResource Strings}, Path=TabAdd}">
+                    <StackPanel Margin="15" VerticalAlignment="Top" Width="400">
+                        <TextBlock Text="{Binding Source={StaticResource Strings}, Path=AddNewTruck}" 
+                                   FontSize="18" 
+                                   FontWeight="SemiBold" 
+                                   Foreground="{DynamicResource PrimaryColor}" 
+                                   Margin="0,0,0,10"/>
+
+                        <TextBox x:Name="txtType"
+                                 materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=ColumnType}"
+                                 Foreground="{DynamicResource PrimaryColor}" Margin="0,5"/>
+                        <TextBox x:Name="txtBrand"
+                                 materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=ColumnBrand}"
+                                 Foreground="{DynamicResource PrimaryColor}" Margin="0,5"/>
+                        <TextBox x:Name="txtHP"
+                                 materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=ColumnHP}"
+                                 Foreground="{DynamicResource PrimaryColor}" Margin="0,5"/>
+                        <TextBox x:Name="txtFuel"
+                                 materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=ColumnFuel}"
+                                 Foreground="{DynamicResource PrimaryColor}" Margin="0,5"/>
+                        <TextBox x:Name="txtYear"
+                                 materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=ColumnProductionYear}"
+                                 Foreground="{DynamicResource PrimaryColor}" Margin="0,5"/>
+                        <TextBox x:Name="txtPlate"
+                                 materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=ColumnLicensePlate}"
+                                 Foreground="{DynamicResource PrimaryColor}" Margin="0,5"/>
+                        <TextBox x:Name="txtMileage"
+                                 materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=ColumnMileage}"
+                                 Foreground="{DynamicResource PrimaryColor}" Margin="0,5"/>
+
+                        <Button Content="{Binding Source={StaticResource Strings}, Path=SaveButton}"
+                                Width="120" Height="30"
+                                Margin="0,15,0,0"
+                                Background="{DynamicResource PrimaryColor}"
+                                HorizontalAlignment="Left"
+                                Click="SaveTruck_Click"/>
+                    </StackPanel>
+                </TabItem>
+
+                <!-- Dodjela prikolice -->
+                <TabItem Header="{Binding Source={StaticResource Strings}, Path=TabAssignTrailer}">
+                    <StackPanel Margin="15" VerticalAlignment="Top" Width="400">
+                        <TextBlock Text="{Binding Source={StaticResource Strings}, Path=AssignTrailerTitle}" 
+                                   FontSize="18" 
+                                   FontWeight="SemiBold" 
+                                   Foreground="{DynamicResource PrimaryColor}" 
+                                   Margin="0,0,0,10"/>
+
+                        <ComboBox x:Name="cmbTruck" 
+                                  materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=AddNewTruck}"
+                                  DisplayMemberPath="RegistarskaOznaka" 
+                                  SelectedValuePath="IdKamiona"
+                                  Foreground="{DynamicResource PrimaryColor}"
+                                  Margin="0,5"/>
+
+                        <ComboBox x:Name="cmbTrailer"
+                                  materialDesign:HintAssist.Hint="{Binding Source={StaticResource Strings}, Path=AssignTrailerTitle}"
+                                  DisplayMemberPath="RegistarskaOznaka"
+                                  SelectedValuePath="IdPrikolice"
+                                  Foreground="{DynamicResource PrimaryColor}"
+                                  Margin="0,5"/>
+
+                        <Button Content="{Binding Source={StaticResource Strings}, Path=AssignButton}"
+                                Width="120" Height="30"
+                                Margin="0,15,0,0"
+                                HorizontalAlignment="Left"
+                                Background="{DynamicResource PrimaryColor}"
+                                Click="AssignTrailer_Click"/>
+                    </StackPanel>
+                </TabItem>
+            </TabControl>
+
+            <!-- Dugme Close -->
+            <Button Content="{Binding CloseButton}" 
+                    Grid.Row="2"
+                    Width="100" Height="30"
+                    Margin="10"
+                    Background="{DynamicResource PrimaryColor}"
+                    HorizontalAlignment="Right"
+                    Click="CloseButton_Click"/>
+        </Grid>
+    </ScrollViewer>
+</Window>
